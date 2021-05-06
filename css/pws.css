@@ -1,0 +1,101 @@
+.container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+input.password {
+    width: 100%;
+    padding: 15px 0;
+    text-indent: 15px;
+}
+.ruler-box {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.ruler-container {
+    width: 100%;
+    display: block;
+}
+
+.ruler-box span {
+    display: block;
+    height: 8px;
+    background: #DBDBDB;
+    border-radius: 4px;
+    flex: 1;
+    margin: 0 5px;
+}
+.ruler-box.pws-Weak span:nth-child(1) {
+    background: #E74F3A;
+}
+.ruler-box.pws-Average span:nth-child(1),
+.ruler-box.pws-Average span:nth-child(2) {
+    background: #F0CB61;
+}
+.ruler-box.pws-Strong span:nth-child(1),
+.ruler-box.pws-Strong span:nth-child(2),
+.ruler-box.pws-Strong span:nth-child(3) {
+    background: #389EE8;
+}
+.ruler-box.pws-Very-strong span {
+    background: #16D9C6;
+}
+
+.ruler-check-list {
+    background: #E7E7E7;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+}
+
+.ruler-check-list span {
+    display: block;
+    width: 100%;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #383838;
+}
+.ruler-check-list span:before {
+    content: '\f00d';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #8B8B8B;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0 10px 0 0;
+}
+.ruler-check-list  span.valid:before {
+    content: "\f046";
+    color: #119737;
+}
+.ruler-str {
+    font-family: monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    color: #173048;
+    margin: 0 5px 25px;
+}
+.ruler-check-list:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #E7E7E7;
+    top: -8px;
+    z-index: 1;
+    transform: rotate(45deg);
+}
